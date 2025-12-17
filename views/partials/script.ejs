@@ -1,0 +1,37 @@
+<% if(success.length> 0){ %>
+  <script>
+    toastr.success('<%=success%>');
+  </script>
+  <% } %>
+
+    <% if(errors.length> 0){ %>
+      <script>
+        toastr.error('<%=errors%>');
+      </script>
+      <% } %>
+        <%- scriptFile %>
+          <%- include('function.ejs') %>
+            <script src="/js/datatable/datatables/jquery.dataTables.min.js"></script>
+            <script src="/js/datatable/datatables/datatable.custom.js"></script>
+            <script src="/js/tostify/js-toastr.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+            <script src="/js/bootstrap/bootstrap.bundle.min.js"></script>
+            <script src="/js/script.js"></script>
+            <script src="/js/notify/bootstrap-notify.min.js"></script>
+            <script src="/js/icons/feather-icon/feather.min.js"></script>
+            <script src="/js/icons/feather-icon/feather-icon.js"></script>
+            <script src="/js/scrollbar/simplebar.js"></script>
+            <script src="/js/scrollbar/custom.js"></script>
+            <script src="/js/sidebar-menu.js"></script>
+            <script src="/js/select2/select2.full.min.js"></script>
+            <script src="/js/select2/select2-custom.js"></script>
+            <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"></script>
+            <!-- <script src="../js/old.js"></script> -->
+            <script>
+              $(document).ready(function () {
+                $(".js-example-basic-single").select2();
+                // if ($('#basic-1').length > 0) {
+                //   $('#basic-1').DataTable({ "responsive": true, "paging": true, "searching": true, "info": true });
+                // }
+              });
+            </script>
